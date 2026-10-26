@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">4FusionLab — Less repetition. More design.</title>
+  <desc id="desc">Open-source add-ins for Autodesk Fusion, with a geometric monogram and a perforated panel drawing.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#294056" stroke-width="1"/></pattern>
+    <mask id="holes"><rect width="360" height="230" rx="22" fill="white"/><g fill="black">
+      <circle cx="54" cy="53" r="17"/><circle cx="117" cy="53" r="17"/><circle cx="180" cy="53" r="17"/><circle cx="243" cy="53" r="17"/><circle cx="306" cy="53" r="17"/>
+      <circle cx="54" cy="115" r="17"/><circle cx="117" cy="115" r="17"/><circle cx="180" cy="115" r="17"/><circle cx="243" cy="115" r="17"/><circle cx="306" cy="115" r="17"/>
+      <circle cx="54" cy="177" r="17"/><circle cx="117" cy="177" r="17"/><circle cx="180" cy="177" r="17"/><circle cx="243" cy="177" r="17"/><circle cx="306" cy="177" r="17"/>
+    </g></mask>
+  </defs>
+  <rect width="1200" height="360" rx="24" fill="#101f31"/>
+  <path d="M670 0h506a24 24 0 0 1 24 24v312a24 24 0 0 1-24 24H670Z" fill="url(#grid)" opacity=".65"/>
+  <g transform="translate(52 46) scale(.22)">
+    <path d="M107 91 57 177h76M119 91v140M174 220V101h73M174 158h58" fill="none" stroke="#f4f1e9" stroke-width="22"/>
+    <rect x="220" y="198" width="28" height="28" rx="6" fill="#ff9251"/>
+  </g>
+  <text x="132" y="92" fill="#f4f1e9" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="700" letter-spacing="-.8">4FusionLab</text>
+  <text x="64" y="177" fill="#f4f1e9" font-family="Arial,Helvetica,sans-serif" font-size="44" font-weight="700" letter-spacing="-1.3">Less repetition.</text>
+  <text x="64" y="230" fill="#ff9251" font-family="Arial,Helvetica,sans-serif" font-size="44" font-weight="700" letter-spacing="-1.3">More design.</text>
+  <text x="66" y="289" fill="#b6c7d7" font-family="Arial,Helvetica,sans-serif" font-size="20">Open-source add-ins for Autodesk Fusion</text>
+  <g transform="translate(778 74) rotate(12 180 115) skewX(-12) scale(.9)">
+    <rect x="9" y="12" width="360" height="230" rx="22" fill="#163b4e" stroke="#527184" stroke-width="2"/>
+    <rect width="360" height="230" rx="22" fill="#7199aa" mask="url(#holes)"/>
+    <rect width="360" height="230" rx="22" fill="none" stroke="#a8d7d6" stroke-width="3"/>
+    <g fill="none" stroke="#ff9251" stroke-width="4"><circle cx="117" cy="115" r="17"/><circle cx="180" cy="115" r="17"/><circle cx="243" cy="115" r="17"/></g>
+    <g fill="#ff9251"><rect x="-5" y="-5" width="10" height="10"/><rect x="355" y="225" width="10" height="10"/></g>
+  </g>
+</svg>
