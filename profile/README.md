@@ -9,12 +9,12 @@
 
 ## Our projects
 
-| Project | What it does | Status |
-| --- | --- | --- |
-| **[Perfora](https://github.com/4FusionLab/Perfora)** — Goddess of holes | Create perforation patterns, ventilation grilles, and decorative panels. | **[Download](https://github.com/4FusionLab/Perfora/releases/latest)** |
-| **[Selectra](https://github.com/4FusionLab/Selectra)** — Goddess of choice | Find similar faces, edges, and connected contours. | **[Download](https://github.com/4FusionLab/Selectra/releases/latest)** |
-| **[Ejix](https://github.com/4FusionLab/Ejix)** — Spirit of extraction | Extract selected volumes into separate bodies or components. | **[Releases](https://github.com/4FusionLab/Ejix/releases/latest)** |
-| **[RuEn](https://github.com/4FusionLab/RuEn)** — Hero of translation | Language helper for Fusion, currently focused on macOS. | In development |
+| Project | What it does | Status | Action |
+| --- | --- | --- | --- |
+| **[Perfora](https://github.com/4FusionLab/Perfora)** — Goddess of holes | Create perforation patterns, ventilation grilles, and decorative panels. | Stable | **[Download](https://github.com/4FusionLab/Perfora/releases/latest)** |
+| **[Selectra](https://github.com/4FusionLab/Selectra)** — Goddess of choice | Find similar faces, edges, and connected contours. | Stable | **[Download](https://github.com/4FusionLab/Selectra/releases/latest)** |
+| **[Ejix](https://github.com/4FusionLab/Ejix)** — Spirit of extraction | Extract selected volumes into separate bodies or components. | Stable | **[Download](https://github.com/4FusionLab/Ejix/releases/latest)** |
+| **[RuEn](https://github.com/4FusionLab/RuEn)** — Hero of translation | Language helper for Fusion, currently focused on macOS. | In Development | [View Project](https://github.com/4FusionLab/RuEn) |
 
 ### Made with Perfora
 
@@ -31,7 +31,7 @@
 
 A future Fusion add-in for turning selected surfaces of solid models into flat layouts.
 
-**Early development. Not yet released.**
+**Status: Planned.** [View Project](https://github.com/4FusionLab/Planara). Not available for download yet.
 
 ## Why 4FusionLab?
 
