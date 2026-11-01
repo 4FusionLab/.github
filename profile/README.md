@@ -16,6 +16,10 @@ We build focused, open-source tools for Autodesk Fusion: generate patterns, sele
 
 *A honeycomb grille made with Perfora. [See more patterns →](https://github.com/4FusionLab/Perfora#made-with-perfora)*
 
+
+- **[RuEn](https://github.com/4FusionLab/RuEn)** — macOS-focused Fusion language helper (in development).
+- **[Planara](https://github.com/4FusionLab/Planara)** — upcoming tool for flattening solid-model surfaces (early development).
+
 ### Built for the modeling workflow
 
 - **Inside Fusion.** Native commands, geometry, and previews where you already work.
