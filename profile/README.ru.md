@@ -14,7 +14,7 @@
 | **[Perfora](https://github.com/4FusionLab/Perfora)** — богиня отверстий | Перфорация, вентиляционные решётки и декоративные узоры. | Stable | **[Скачать](https://github.com/4FusionLab/Perfora/releases/latest)** |
 | **[Selectra](https://github.com/4FusionLab/Selectra)** — богиня выбора | Быстрое выделение похожих граней, рёбер и связанных контуров. | Stable | **[Скачать](https://github.com/4FusionLab/Selectra/releases/latest)** |
 | **[Ejix](https://github.com/4FusionLab/Ejix)** — дух извлечения | Извлечение выбранных объёмов в отдельные тела или компоненты. | Stable | **[Скачать](https://github.com/4FusionLab/Ejix/releases/latest)** |
-| **[RuEn](https://github.com/4FusionLab/RuEn)** — герой перевода | Языковой помощник для Fusion, ориентированный на macOS. | In Development | [О проекте](https://github.com/4FusionLab/RuEn) |
+| **[RuEn](https://github.com/4FusionLab/RuEn)** — герой перевода | Горячие клавиши Fusion при русской раскладке на macOS и Windows. | Stable | **[Скачать](https://github.com/4FusionLab/RuEn/releases/latest)** |
 
 ### Создано с Perfora
 
