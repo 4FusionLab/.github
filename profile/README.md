@@ -14,7 +14,7 @@
 | **[Perfora](https://github.com/4FusionLab/Perfora)** — Goddess of holes | Create perforation patterns, ventilation grilles, and decorative panels. | Stable | **[Download](https://github.com/4FusionLab/Perfora/releases/latest)** |
 | **[Selectra](https://github.com/4FusionLab/Selectra)** — Goddess of choice | Find similar faces, edges, and connected contours. | Stable | **[Download](https://github.com/4FusionLab/Selectra/releases/latest)** |
 | **[Ejix](https://github.com/4FusionLab/Ejix)** — Spirit of extraction | Extract selected volumes into separate bodies or components. | Stable | **[Download](https://github.com/4FusionLab/Ejix/releases/latest)** |
-| **[RuEn](https://github.com/4FusionLab/RuEn)** — Hero of translation | Language helper for Fusion, currently focused on macOS. | In Development | [View Project](https://github.com/4FusionLab/RuEn) |
+| **[RuEn](https://github.com/4FusionLab/RuEn)** — Hero of translation | Russian-layout keyboard shortcuts for Fusion on macOS and Windows. | Stable | **[Download](https://github.com/4FusionLab/RuEn/releases/latest)** |
 
 ### Made with Perfora
 
