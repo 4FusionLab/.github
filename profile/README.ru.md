@@ -1,7 +1,7 @@
 <p align="center"><img src="https://raw.githubusercontent.com/4FusionLab/.github/main/assets/banner.svg" alt="4FusionLab" width="100%"></p>
 
 <h1 align="center">4FusionLab</h1>
-<p align="center"><strong>Меньше рутины. Больше проектирования.</strong><br>Независимые инструменты для Autodesk Fusion, упрощающие повседневную работу с моделями.</p>
+<p align="center"><strong>Меньше рутины. Больше проектирования.</strong><br>Независимые аддоны Fusion 360 для CAD-моделирования и упрощения работы в Autodesk Fusion.</p>
 
 <p align="center"><a href="README.md">English</a> · <a href="#наши-проекты">Проекты</a> · <a href="#скоро">Скоро</a></p>
 
