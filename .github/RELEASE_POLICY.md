@@ -19,6 +19,13 @@ This repository follows the organization-wide release contract. The **GitVersion
 6. Avoid opportunistic releases on a routine PR merge. When required release notes or project-specific approval/evidence is absent, skip publication safely rather than inventing notes or issuing an unintended version.
 7. A broken release is corrected by a new patch version. Existing public tags, release notes and downloadable files remain immutable.
 
+## Explicit release trigger (organization-wide)
+
+- A product release starts **only** after deliberately pushing an immutable tag `vMAJOR.MINOR.PATCH` (stable) or `vMAJOR.MINOR.PATCH-IDENTIFIER` (prerelease) for a tested commit reachable from `main`. A branch push, PR merge, or manual CI dispatch never initiates product publication.
+- GitVersion.Tool **6.8.2** determines numeric `MajorMinorPatch`; the tag, Fusion manifest inside a ZIP, release asset filename, and release version must agree. Prerelease suffixes belong to Git tags and GitHub Releases, not Fusion manifest versions.
+- Existing test matrices, checksums, release notes and native CAD evidence are mandatory wherever applicable. Invalid explicit release attempts must fail safely.
+- Never mutate historical tags, replace published release assets, create tags as a side effect of CI, or mark prereleases Latest. Repositories without validated distribution pipelines do not publish GitHub Releases. Independent Pages deployments are not product releases.
+
 ## Repository-specific publishing gate
 
-This repository holds organization metadata. GitVersion is used for change tracking; it does not create GitHub Releases or deploy add-ins.
+This repository defines organization metadata and release policy, not a distributable. GitVersion validation continues; tag pushes cannot publish releases.
