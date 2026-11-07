@@ -1,0 +1,37 @@
+name: "4FusionLab release notes"
+description: "Reuse reviewed version notes or generate readable notes from Git history"
+inputs:
+  product:
+    description: "Product name for release heading"
+    required: true
+  version:
+    description: "Calculated numeric GitVersion value"
+    required: true
+  candidate:
+    description: "Optional repository-relative version-specific reviewed notes file"
+    required: false
+    default: ""
+  output:
+    description: "Writable path for generated notes; use a path in runner.temp"
+    required: true
+outputs:
+  notes-file:
+    description: "Path to the complete release notes"
+    value: ${{ steps.notes.outputs.notes_file }}
+runs:
+  using: composite
+  steps:
+    - name: Prepare release notes
+      shell: bash
+      id: notes
+      env:
+        RELEASE_PRODUCT: ${{ inputs.product }}
+        RELEASE_VERSION: ${{ inputs.version }}
+        RELEASE_CANDIDATE: ${{ inputs.candidate }}
+        RELEASE_OUTPUT: ${{ inputs.output }}
+      run: |
+        set -euo pipefail
+        python3 "${{ github.action_path }}/notes.py" \
+          --product "$RELEASE_PRODUCT" --version "$RELEASE_VERSION" \
+          --candidate "$RELEASE_CANDIDATE" --output "$RELEASE_OUTPUT"
+        echo "notes_file=$RELEASE_OUTPUT" >> "$GITHUB_OUTPUT"
