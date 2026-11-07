@@ -4,7 +4,7 @@
 
 - A direct push to `main` or a PR merge into `main` is the only normal release event. PR checks, manual CI dispatch and version-tag pushes **do not** initiate publication.
 - Before publishing, compare the entire `github.event.before..GITHUB_SHA` range, including renamed/deleted runtime files. A release is eligible **only** if the pushed commits change a shippable add-in/runtime file, runtime resource, native component, or explicitly designated distribution input.
-- The repository's `.github/release-paths.txt` is the audited allowlist; `scripts/release_changes.py` enforces it. Changes limited to README, guides, design documents, screenshots, tests, CI workflows, repository policy or GitVersion config must not publish a release.
+- Repositories with a shippable runtime use `.github/release-paths.txt` as the audited allowlist, enforced by `scripts/release_changes.py`. Repositories without a runtime have no release job. Changes limited to README, guides, design documents, screenshots, tests, CI workflows, repository policy or GitVersion config must not publish a release.
 - All required existing CI checks must succeed before publishing. A failed gate means no release, no mutable tag and no replaced assets.
 
 ## Version and distribution
