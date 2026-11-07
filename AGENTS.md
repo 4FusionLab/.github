@@ -3,6 +3,8 @@
 This repository holds reusable, **read-only** CI building blocks and organization-level defaults. Product-specific instructions belong in each product repository.
 
 ## Language and product documentation
+- For product README creation or edits, follow [Product README guidelines](README_GUIDELINES.md), including language parity and license verification.
+- Write documents in English; maintain separate Russian versions of documentation. Intermediate working notes do not require translation.
 - Discuss requirements and plans in Russian. Use English for Autodesk Fusion UI labels, stable API identifiers and public action input names.
 - Maintain separate EN/RU user documentation where a product already has both. Never silently replace either language with spoilers or machine-generated placeholders.
 - Respect existing product architecture, UX contracts, tests and CAD compatibility caveats.

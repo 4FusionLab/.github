@@ -1,5 +1,7 @@
 # 4FusionLab organization profile
 
+[Русская версия](README.ru.md)
+
 Public profile and visual assets for [4FusionLab](https://github.com/4FusionLab).
 
 - `profile/README.md` — the organization's public Overview.
@@ -8,3 +10,5 @@ Public profile and visual assets for [4FusionLab](https://github.com/4FusionLab)
 - `assets/avatar.png` — raster avatar for GitHub's profile picture upload.
 
 Project documentation and support belong in the individual repositories: [Perfora](https://github.com/4FusionLab/Perfora) (perforation patterns), [Selectra](https://github.com/4FusionLab/Selectra) (similar geometry selection), [Ejix](https://github.com/4FusionLab/Ejix) (volume extraction), [RuEn](https://github.com/4FusionLab/RuEn) (Russian-layout shortcuts), and [Planara](https://github.com/4FusionLab/Planara) (planned surface flattening).
+
+[Product README guidelines](README_GUIDELINES.md) · [Русская версия правил](README_GUIDELINES.ru.md)
