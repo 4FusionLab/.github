@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a reproducible problem with a 4FusionLab add-in
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Describe the problem without attaching private CAD data, tokens or credentials."
+  - type: input
+    id: fusion
+    attributes:
+      label: Autodesk Fusion version
+      placeholder: "e.g. 2.xxxx"
+    validations:
+      required: false
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Windows
+        - Other / unknown
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include expected and observed behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots (redact sensitive information)
+    validations:
+      required: false
