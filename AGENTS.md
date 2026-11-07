@@ -13,6 +13,7 @@ This repository holds reusable, **read-only** CI building blocks and organizatio
 - Preserve each repository's `.github/release-paths.txt` as its reviewed release-eligibility allowlist. Pure README, docs, test, workflow, policy and AGENTS.md changes must not create a GitHub Release.
 - GitVersion.Tool is pinned to **6.8.2**. Full Git history is required. Published tags, releases and uploaded assets are immutable; never retarget tags, clobber artifacts or downgrade a prerelease to Stable.
 - Core shared Actions live at `.github/actions/` and must be pinned by their exact commit SHA in consuming projects. Do not reference the moving `main` branch in production release jobs.
+- Pin first-party `actions/*` usages to the exact reviewed SHAs in [`ACTIONS_PINS.md`](ACTIONS_PINS.md). Verify upstream tags before updating; do not use floating major-version tags in product workflows.
 - Only publishing jobs need `contents: write`; package tests, metadata inspection and PR jobs run with least-privilege read permissions.
 - A passing offline build or Python test **does not** imply Autodesk Fusion CAD acceptance. Preserve native platform evidence and security/compatibility gates.
 
