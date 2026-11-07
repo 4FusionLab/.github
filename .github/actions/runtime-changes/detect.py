@@ -15,7 +15,7 @@ import subprocess
 from urllib.request import Request, urlopen
 
 
-VERSION_TAG = re.compile(r"^v[0-9]+\\.[0-9]+\\.[0-9]+(?:-[a-zA-Z0-9][a-zA-Z0-9.-]*)?$")
+VERSION_TAG = re.compile(r"^v[0-9]+\.[0-9]+\.[0-9]+(?:-[a-zA-Z0-9][a-zA-Z0-9.-]*)?$")
 REPOSITORY = re.compile(r"^[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+$")
 
 
@@ -45,7 +45,7 @@ def git_paths(before, after):
         command = ["git", "diff", "--name-only", "-z", "--no-renames", before, after]
     stdout = subprocess.check_output(command)
     return [entry.decode("utf-8", errors="surrogateescape")
-            for entry in stdout.split(b"\\0") if entry]
+            for entry in stdout.split(b"\0") if entry]
 
 
 def evaluate(paths, rules):
@@ -150,8 +150,8 @@ def main():
         print("  " + path)
     if args.github_output:
         with open(args.github_output, "a", encoding="utf-8") as output:
-            output.write(f"release={value}\\nmatched_count={len(matched)}\\n")
-            output.write(f"baseline_sha={before or ''}\\nbaseline_tag={baseline_tag}\\n")
+            output.write(f"release={value}\nmatched_count={len(matched)}\n")
+            output.write(f"baseline_sha={before or ''}\nbaseline_tag={baseline_tag}\n")
 
 
 if __name__ == "__main__":
