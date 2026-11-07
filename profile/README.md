@@ -13,11 +13,11 @@ Download a published release from each project's repository.
 
 | Project | What it does | Status | Get it |
 | --- | --- | --- | --- |
-| **[Paramood](https://github.com/4FusionLab/Paramood)** — Keeper of Measure | Create, calculate, and edit Fusion user parameters and expressions in a compact palette. | Stable | **[Download](https://github.com/4FusionLab/Paramood/releases/latest)** |
-| **[Perfora](https://github.com/4FusionLab/Perfora)** — Goddess of holes | Build parametric perforation patterns, ventilation grilles, and organic or Voronoi panels. | Stable | **[Download](https://github.com/4FusionLab/Perfora/releases/latest)** |
-| **[Selectra](https://github.com/4FusionLab/Selectra)** — Goddess of choice | Select similar faces and edges, or trace closed contours, without repetitive clicks. | Stable | **[Download](https://github.com/4FusionLab/Selectra/releases/latest)** |
-| **[Ejix](https://github.com/4FusionLab/Ejix)** — Spirit of extraction | Extract solid volumes from profiles or planar faces into separate bodies or components. | Stable | **[Download](https://github.com/4FusionLab/Ejix/releases/latest)** |
-| **[RuEn](https://github.com/4FusionLab/RuEn)** — Hero of translation | Use assigned Fusion shortcuts while typing with a Russian keyboard layout on macOS or Windows. | Stable | **[Download](https://github.com/4FusionLab/RuEn/releases/latest)** |
+| **[Paramood](https://github.com/4FusionLab/Paramood)** — Keeper of Measure | Create and edit user parameters, edit model parameters, and calculate expressions in a compact palette. | Stable | [![Paramood latest release](https://img.shields.io/github/v/release/4FusionLab/Paramood?label=release)](https://github.com/4FusionLab/Paramood/releases/latest) |
+| **[Perfora](https://github.com/4FusionLab/Perfora)** — Goddess of holes | Build parametric perforation patterns, ventilation grilles, and organic or Voronoi panels. | Stable | [![Perfora latest release](https://img.shields.io/github/v/release/4FusionLab/Perfora?label=release)](https://github.com/4FusionLab/Perfora/releases/latest) |
+| **[Selectra](https://github.com/4FusionLab/Selectra)** — Goddess of choice | Select similar faces and edges, or trace closed contours, without repetitive clicks. | Stable | [![Selectra latest release](https://img.shields.io/github/v/release/4FusionLab/Selectra?label=release)](https://github.com/4FusionLab/Selectra/releases/latest) |
+| **[Ejix](https://github.com/4FusionLab/Ejix)** — Spirit of extraction | Extract solid volumes from profiles or planar faces into separate bodies or components. | Stable | [![Ejix latest release](https://img.shields.io/github/v/release/4FusionLab/Ejix?label=release)](https://github.com/4FusionLab/Ejix/releases/latest) |
+| **[RuEn](https://github.com/4FusionLab/RuEn)** — Hero of translation | Use assigned Fusion shortcuts while typing with a Russian keyboard layout on macOS or Windows. | Stable | [![RuEn latest release](https://img.shields.io/github/v/release/4FusionLab/RuEn?label=release)](https://github.com/4FusionLab/RuEn/releases/latest) |
 
 ### Made with Perfora
 
@@ -27,6 +27,14 @@ Download a published release from each project's repository.
 </p>
 
 <p align="center"><sub>See more examples and installation instructions in <a href="https://github.com/4FusionLab/Perfora">Perfora</a>.</sub></p>
+
+## Experimental release
+
+### [Mesora](https://github.com/4FusionLab/Mesora) — informational dimensions in the model
+
+[![Mesora latest release](https://img.shields.io/github/v/release/4FusionLab/Mesora?label=release)](https://github.com/4FusionLab/Mesora/releases/latest) ![Experimental](https://img.shields.io/badge/status-experimental-orange)
+
+Measure supported geometry and keep a table of 3D dimensions for the current Fusion session. **Use disposable documents only and do not save while Mesora is enabled:** save and reopen safety has not been established. Measurements are lost when the document closes or the add-in stops. See [Mesora](https://github.com/4FusionLab/Mesora) for details and limitations.
 
 ## In development
 
@@ -40,7 +48,7 @@ An experimental Fusion surface-flattening add-in intended to unfold selected fac
 
 A planned Fusion add-in for finding real 3D-printing filament colors by brand, product line, and shade, then installing visual appearances into the active design.
 
-**Status: Planned / pre-development.** No downloadable add-in yet.
+**Status: Planned / pre-development.** Release artifacts exist in the repository, but its documentation does not yet establish a working Fusion implementation. The capabilities above remain planned.
 
 ## Filament color catalog
 
@@ -48,7 +56,7 @@ A planned Fusion add-in for finding real 3D-printing filament colors by brand, p
 
 **[Explore the interactive catalog demo](https://4fusionlab.github.io/Filamentra-DataSource/)** · **[View the catalog data](https://github.com/4FusionLab/Filamentra-DataSource)**
 
-The browser demo previews catalog data; it is **not** a released Fusion add-in. Filament color and finish representations are approximate, not certified engineering material properties.
+The browser demo previews catalog data; Filamentra documentation does not yet establish a working Fusion add-in. Filament color and finish representations are approximate, not certified engineering material properties.
 
 ## Why 4FusionLab?
 

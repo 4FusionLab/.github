@@ -13,11 +13,11 @@
 
 | Проект | Назначение | Статус | Действие |
 | --- | --- | --- | --- |
-| **[Paramood](https://github.com/4FusionLab/Paramood)** — хранитель меры | Создание, вычисление и изменение пользовательских параметров и выражений Fusion в компактной панели. | Stable | **[Скачать](https://github.com/4FusionLab/Paramood/releases/latest)** |
-| **[Perfora](https://github.com/4FusionLab/Perfora)** — богиня отверстий | Параметрическая перфорация, вентиляционные решётки, органические узоры и диаграммы Вороного. | Stable | **[Скачать](https://github.com/4FusionLab/Perfora/releases/latest)** |
-| **[Selectra](https://github.com/4FusionLab/Selectra)** — богиня выбора | Выделение похожих граней и рёбер, поиск замкнутых контуров без лишних кликов. | Stable | **[Скачать](https://github.com/4FusionLab/Selectra/releases/latest)** |
-| **[Ejix](https://github.com/4FusionLab/Ejix)** — дух извлечения | Извлечение объёмов по профилям или плоским граням в отдельные тела и компоненты. | Stable | **[Скачать](https://github.com/4FusionLab/Ejix/releases/latest)** |
-| **[RuEn](https://github.com/4FusionLab/RuEn)** — герой перевода | Работа назначенных горячих клавиш Fusion при русской раскладке на macOS и Windows. | Stable | **[Скачать](https://github.com/4FusionLab/RuEn/releases/latest)** |
+| **[Paramood](https://github.com/4FusionLab/Paramood)** — хранитель меры | Создание и изменение пользовательских параметров, редактирование параметров модели и вычисление выражений в компактной панели. | Stable | [![Paramood latest release](https://img.shields.io/github/v/release/4FusionLab/Paramood?label=release)](https://github.com/4FusionLab/Paramood/releases/latest) |
+| **[Perfora](https://github.com/4FusionLab/Perfora)** — богиня отверстий | Параметрическая перфорация, вентиляционные решётки, органические узоры и диаграммы Вороного. | Stable | [![Perfora latest release](https://img.shields.io/github/v/release/4FusionLab/Perfora?label=release)](https://github.com/4FusionLab/Perfora/releases/latest) |
+| **[Selectra](https://github.com/4FusionLab/Selectra)** — богиня выбора | Выделение похожих граней и рёбер, поиск замкнутых контуров без лишних кликов. | Stable | [![Selectra latest release](https://img.shields.io/github/v/release/4FusionLab/Selectra?label=release)](https://github.com/4FusionLab/Selectra/releases/latest) |
+| **[Ejix](https://github.com/4FusionLab/Ejix)** — дух извлечения | Извлечение объёмов по профилям или плоским граням в отдельные тела и компоненты. | Stable | [![Ejix latest release](https://img.shields.io/github/v/release/4FusionLab/Ejix?label=release)](https://github.com/4FusionLab/Ejix/releases/latest) |
+| **[RuEn](https://github.com/4FusionLab/RuEn)** — герой перевода | Работа назначенных горячих клавиш Fusion при русской раскладке на macOS и Windows. | Stable | [![RuEn latest release](https://img.shields.io/github/v/release/4FusionLab/RuEn?label=release)](https://github.com/4FusionLab/RuEn/releases/latest) |
 
 ### Создано с Perfora
 
@@ -27,6 +27,14 @@
 </p>
 
 <p align="center"><sub>Больше примеров и инструкция по установке — в <a href="https://github.com/4FusionLab/Perfora">Perfora</a>.</sub></p>
+
+## Экспериментальный релиз
+
+### [Mesora](https://github.com/4FusionLab/Mesora) — информационные размеры в модели
+
+[![Mesora latest release](https://img.shields.io/github/v/release/4FusionLab/Mesora?label=release)](https://github.com/4FusionLab/Mesora/releases/latest) ![Экспериментальный](https://img.shields.io/badge/status-experimental-orange)
+
+Измерения поддерживаемой геометрии и таблица 3D-размеров в текущем сеансе Fusion. **Используйте только временные документы и не сохраняйте их при включённом Mesora:** безопасность сохранения и повторного открытия не подтверждена. Измерения теряются при закрытии документа или остановке аддона. Подробности и ограничения — в [Mesora](https://github.com/4FusionLab/Mesora).
 
 ## В разработке
 
@@ -40,7 +48,7 @@
 
 Планируемый аддон для поиска реальных цветов филаментов для 3D-печати по производителям, сериям и оттенкам с установкой визуальных материалов в текущий проект Fusion.
 
-**Статус: планирование / подготовка к разработке.** Аддон пока недоступен для скачивания.
+**Статус: планирование / подготовка к разработке.** В репозитории есть артефакты релизов, однако его документация пока не подтверждает работоспособную реализацию для Fusion. Возможности выше остаются планами.
 
 ## Каталог цветов филаментов
 
@@ -48,7 +56,7 @@
 
 **[Открыть интерактивную демоверсию каталога](https://4fusionlab.github.io/Filamentra-DataSource/)** · **[Посмотреть данные](https://github.com/4FusionLab/Filamentra-DataSource)**
 
-Веб-демонстрация показывает данные каталога, но **не является выпущенным аддоном Fusion**. Оттенки и визуальные эффекты приблизительные и не заменяют инженерные характеристики материалов.
+Веб-демонстрация показывает данные каталога; документация Filamentra пока не подтверждает работоспособную реализацию аддона Fusion. Оттенки и визуальные эффекты приблизительные и не заменяют инженерные характеристики материалов.
 
 ## Почему 4FusionLab?
 
