@@ -1,0 +1,34 @@
+name: "4FusionLab GitVersion 6.8.2"
+description: "Resolve a numeric Fusion package version or full SemVer without publishing"
+inputs:
+  variable:
+    description: "GitVersion variable: MajorMinorPatch or SemVer"
+    required: false
+    default: "MajorMinorPatch"
+outputs:
+  version:
+    description: "Resolved GitVersion value"
+    value: ${{ steps.version.outputs.version }}
+runs:
+  using: composite
+  steps:
+    - id: version
+      name: Calculate GitVersion
+      shell: bash
+      env:
+        GITVERSION_VARIABLE: ${{ inputs.variable }}
+      run: |
+        set -euo pipefail
+        case "$GITVERSION_VARIABLE" in
+          MajorMinorPatch|SemVer) ;;
+          *) echo "Unsupported GitVersion variable: $GITVERSION_VARIABLE" >&2; exit 2 ;;
+        esac
+        dotnet tool install GitVersion.Tool --tool-path "$RUNNER_TEMP/gitversion" --version 6.8.2
+        version="$("$RUNNER_TEMP/gitversion/dotnet-gitversion" /showvariable "$GITVERSION_VARIABLE")"
+        if [[ "$GITVERSION_VARIABLE" == MajorMinorPatch ]]; then
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || exit 1
+        else
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?(\+[0-9A-Za-z.-]+)?$ ]] || exit 1
+        fi
+        echo "version=$version" >> "$GITHUB_OUTPUT"
+        echo "### GitVersion ($GITVERSION_VARIABLE): $version" >> "$GITHUB_STEP_SUMMARY"
