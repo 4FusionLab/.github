@@ -1,5 +1,7 @@
 # Official GitHub Actions pins
 
+[Русская версия](ACTIONS_PINS.ru.md)
+
 This file is the 4FusionLab source of truth for first-party GitHub Actions used in CI, add-in packaging and (manual) GitHub Pages publishing. Check the upstream repository tag ref before changing any SHA. Pin to an immutable **40-character commit SHA**, not `@vN`, `@main` or an abbreviated hash.
 
 | Action | Reviewed version | Immutable commit SHA |

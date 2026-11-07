@@ -1,5 +1,7 @@
 # Recovering missed automatic releases
 
+[Русская версия](RELEASE_RECOVERY.ru.md)
+
 ## Problem
 
 A push can modify a shippable runtime file while CI or the publishing job fails.
