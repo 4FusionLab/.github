@@ -1,0 +1,68 @@
+name: Shared release platform checks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/actions/**'
+      - '.github/tests/**'
+      - '.github/workflows/platform-tests.yml'
+  pull_request:
+    paths:
+      - '.github/actions/**'
+      - '.github/tests/**'
+      - '.github/workflows/platform-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  self-test:
+    name: Shared action contract tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Test release classifier, notes, ZIP contracts
+        run: python -m unittest discover -s .github/tests -v
+      - name: Execute local GitVersion composite action (read-only)
+        id: version
+        uses: ./.github/actions/resolve-version
+      - name: Exercise local release notes composite action
+        uses: ./.github/actions/release-notes
+        with:
+          product: SharedPlatform
+          version: ${{ steps.version.outputs.version }}
+          output: ${{ runner.temp }}/platform-notes.md
+      - name: Generate inert test archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib
+          import zipfile
+          from pathlib import Path
+          path = Path('dist/SharedPlatform-0.0.0.zip')
+          path.parent.mkdir(exist_ok=True)
+          with zipfile.ZipFile(path, 'w') as bundle:
+              bundle.writestr('demo.txt', 'contract check')
+          digest = hashlib.sha256(path.read_bytes()).hexdigest()
+          path.with_suffix('.zip.sha256').write_text(
+              digest + '  ' + path.name + '\n', encoding='ascii')
+          PY
+      - name: Exercise local archive verification composite action
+        uses: ./.github/actions/verify-archive
+        with:
+          product: SharedPlatform
+          version: '0.0.0'
+          archives: dist/SharedPlatform-0.0.0.zip
+          notes: ${{ runner.temp }}/platform-notes.md
+      - name: Check generated notes
+        run: test -s "${{ runner.temp }}/platform-notes.md"
