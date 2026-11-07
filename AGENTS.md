@@ -9,7 +9,7 @@ This repository holds reusable, **read-only** CI building blocks and organizatio
 
 ## Git, CI and releasing
 - Prefer a small, reviewed PR for CI/publishing changes. Do not force-push or amend public history. Keep direct main pushes possible where repository permissions allow them.
-- Do not manually create release tags. A direct push or PR merge to `main` triggers **only if the changed-file set includes shipped runtime inputs**.
+- Do not manually create release tags. A push or PR merge to `main` may publish **only when shipped runtime inputs have changed since the last published Release**. A docs-only push can recover an earlier failed runtime release, but must never independently create one. See [`RELEASE_RECOVERY.md`](RELEASE_RECOVERY.md).
 - Preserve each repository's `.github/release-paths.txt` as its reviewed release-eligibility allowlist. Pure README, docs, test, workflow, policy and AGENTS.md changes must not create a GitHub Release.
 - GitVersion.Tool is pinned to **6.8.2**. Full Git history is required. Published tags, releases and uploaded assets are immutable; never retarget tags, clobber artifacts or downgrade a prerelease to Stable.
 - Core shared Actions live at `.github/actions/` and must be pinned by their exact commit SHA in consuming projects. Do not reference the moving `main` branch in production release jobs.

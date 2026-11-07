@@ -1,5 +1,5 @@
 name: "4FusionLab runtime change detection"
-description: "Compare the entire push range to the repository's auditable release-paths allowlist"
+description: "Check runtime changes since the last published release, with an opt-in recovery mode"
 inputs:
   before:
     description: "Previous commit in push event (github.event.before)"
@@ -11,13 +11,27 @@ inputs:
     description: "Repository-relative runtime allowlist"
     required: false
     default: ".github/release-paths.txt"
+  recover-unpublished:
+    description: "If true, compare to last published ancestor release instead of just the push range"
+    required: false
+    default: "false"
+  token:
+    description: "Read-only GitHub token needed for Release API in recovery mode"
+    required: false
+    default: ""
 outputs:
   release:
-    description: "true iff runtime-affecting file was added/modified/deleted/renamed"
+    description: "true iff eligible runtime changes have not been published"
     value: ${{ steps.changes.outputs.release }}
   matched-count:
     description: "Number of matched runtime paths"
     value: ${{ steps.changes.outputs.matched_count }}
+  baseline-sha:
+    description: "Commit used as comparison baseline"
+    value: ${{ steps.changes.outputs.baseline_sha }}
+  baseline-tag:
+    description: "Published Release tag used as checkpoint, or blank for push range"
+    value: ${{ steps.changes.outputs.baseline_tag }}
 runs:
   using: composite
   steps:
@@ -28,10 +42,18 @@ runs:
         RELEASE_BEFORE: ${{ inputs.before }}
         RELEASE_AFTER: ${{ inputs.after }}
         RELEASE_PATHS_FILE: ${{ inputs.paths-file }}
+        RELEASE_RECOVERY: ${{ inputs.recover-unpublished }}
+        GITHUB_TOKEN: ${{ inputs.token }}
       run: |
         set -euo pipefail
+        args=()
+        case "$RELEASE_RECOVERY" in
+          true) args+=(--recover-unpublished) ;;
+          false) ;;
+          *) echo "Expected recover-unpublished=true|false" >&2; exit 2 ;;
+        esac
         python3 "${{ github.action_path }}/detect.py" \
           --config "$GITHUB_WORKSPACE/$RELEASE_PATHS_FILE" \
           --before "$RELEASE_BEFORE" \
           --after "$RELEASE_AFTER" \
-          --github-output "$GITHUB_OUTPUT"
+          --github-output "$GITHUB_OUTPUT" "${args[@]}"
