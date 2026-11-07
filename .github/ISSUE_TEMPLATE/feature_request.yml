@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest a change to an add-in or a new user workflow
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Explain what you cannot do in Fusion today
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Desired behaviour
+      description: Include an example modelling scenario and expected outcome
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and constraints
+    validations:
+      required: false
