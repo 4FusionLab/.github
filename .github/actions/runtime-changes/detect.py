@@ -56,7 +56,8 @@ def evaluate(paths, rules):
 
 def fetch_releases(repository, token):
     """Fail closed on API failures, rather than silently losing recovery."""
-    if not REPOSITORY.fullmatch(repository):
+    if (not REPOSITORY.fullmatch(repository)
+            or any(component in (".", "..") for component in repository.split("/"))):
         raise ValueError("Expected a GitHub owner/repository name.")
     if not token:
         raise ValueError("GITHUB_TOKEN is required to recover unpublished releases.")
