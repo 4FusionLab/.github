@@ -3,7 +3,7 @@
 <h1 align="center">4FusionLab</h1>
 <p align="center"><strong>Less repetition. More design.</strong><br>Independent tools for Autodesk Fusion (Fusion 360) that simplify CAD modeling, selection, parameters, and everyday design workflows.</p>
 
-<p align="center"><a href="#available-add-ins">Available add-ins</a> · <a href="#in-development">In development</a> · <a href="#filament-color-catalog">Filament catalog</a> · <a href="README.ru.md">Русский</a></p>
+<p align="center"><a href="#available-add-ins">Available add-ins</a> · <a href="#in-development">In development</a> · <a href="#filament-color-catalog">Filament catalog</a> · <a href="#for-developers">For developers</a> · <a href="README.ru.md">Русский</a></p>
 
 ---
 
@@ -13,7 +13,7 @@ Download a published release from each project's repository.
 
 | Project | What it does | Status | Get it |
 | --- | --- | --- | --- |
-| **[Paramood](https://github.com/4FusionLab/Paramood)** — Keeper of Measure | Create and edit user parameters, edit model parameters, and calculate expressions in a compact palette. | Stable | [![Paramood latest release](https://img.shields.io/github/v/release/4FusionLab/Paramood?label=release)](https://github.com/4FusionLab/Paramood/releases/latest) |
+| **[Paramood](https://github.com/4FusionLab/Paramood)** — Keeper of Measure | Manage user and model parameters, calculate formulas with IntelliSense, and switch between saved model variants in one palette. | Stable | [![Paramood latest release](https://img.shields.io/github/v/release/4FusionLab/Paramood?label=release)](https://github.com/4FusionLab/Paramood/releases/latest) |
 | **[Perfora](https://github.com/4FusionLab/Perfora)** — Goddess of holes | Build parametric perforation patterns, ventilation grilles, and organic or Voronoi panels. | Stable | [![Perfora latest release](https://img.shields.io/github/v/release/4FusionLab/Perfora?label=release)](https://github.com/4FusionLab/Perfora/releases/latest) |
 | **[Selectra](https://github.com/4FusionLab/Selectra)** — Goddess of choice | Select similar faces and edges, or trace closed contours, without repetitive clicks. | Stable | [![Selectra latest release](https://img.shields.io/github/v/release/4FusionLab/Selectra?label=release)](https://github.com/4FusionLab/Selectra/releases/latest) |
 | **[Ejix](https://github.com/4FusionLab/Ejix)** — Spirit of extraction | Extract solid volumes from profiles or planar faces into separate bodies or components. | Stable | [![Ejix latest release](https://img.shields.io/github/v/release/4FusionLab/Ejix?label=release)](https://github.com/4FusionLab/Ejix/releases/latest) |
@@ -34,9 +34,15 @@ Download a published release from each project's repository.
 
 [![Mesora latest release](https://img.shields.io/github/v/release/4FusionLab/Mesora?label=release)](https://github.com/4FusionLab/Mesora/releases/latest) ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 
-Measure supported geometry and keep a table of 3D dimensions for the current Fusion session. **Use disposable documents only and do not save while Mesora is enabled:** save and reopen safety has not been established. Measurements are lost when the document closes or the add-in stops. See [Mesora](https://github.com/4FusionLab/Mesora) for details and limitations.
+Display session-only 3D dimensions for supported distances, angles, lengths, radii, diameters, areas, and perimeters. **Use disposable documents only and do not save while Mesora is enabled:** save and reopen safety has not been established. Measurements are lost when the document closes or the add-in stops. See [Mesora](https://github.com/4FusionLab/Mesora) for details and limitations.
 
 ## In development
+
+### [Threader](https://github.com/4FusionLab/Threader) — thread modeling (project scaffold)
+
+A new repository for a future Fusion thread-creation add-in. It currently contains the uninitialized shared add-in template, **not a working thread generator**.
+
+**Status: Initial scaffold.** No functional add-in or downloadable release yet.
 
 ### [Planara](https://github.com/4FusionLab/Planara) — Goddess of flat worlds
 
@@ -57,6 +63,12 @@ A planned Fusion add-in for finding real 3D-printing filament colors by brand, p
 **[Explore the interactive catalog demo](https://4fusionlab.github.io/Filamentra-DataSource/)** · **[View the catalog data](https://github.com/4FusionLab/Filamentra-DataSource)**
 
 The browser demo previews catalog data; Filamentra documentation does not yet establish a working Fusion add-in. Filament color and finish representations are approximate, not certified engineering material properties.
+
+## For developers
+
+**[Fusion Add-in Template](https://github.com/4FusionLab/.fusion-addin-template)** provides a reusable starting point for new Autodesk Fusion add-ins: a manifest, command starter, offline tests, cross-platform CI, deterministic release archives, bilingual documentation, and `AGENTS.md` guidance. The template must be initialized before it can be used as a product.
+
+**[Shared 4FusionLab platform](https://github.com/4FusionLab/.github)** contains reusable build/release automation and [product README guidelines](https://github.com/4FusionLab/.github/blob/main/README_GUIDELINES.md). These repositories are development infrastructure, not installable add-ins.
 
 ## Why 4FusionLab?
 
