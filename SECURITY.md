@@ -1,5 +1,7 @@
 # Security policy
 
+[Русская версия](SECURITY.ru.md)
+
 If you believe you have found a security vulnerability in a 4FusionLab repository or release pipeline, **do not post exploitable details in a public GitHub Issue**.
 
 Use GitHub's private vulnerability reporting / Security Advisories when enabled for that repository, or contact its maintainers through an existing private communication channel.

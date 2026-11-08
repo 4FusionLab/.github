@@ -1,5 +1,7 @@
 # Shared Release Platform
 
+[Русская версия](RELEASE_PLATFORM.ru.md)
+
 Central, reusable Actions for 4FusionLab repositories. Source: [4FusionLab/.github](https://github.com/4FusionLab/.github).
 
 ## Compatibility and rollout

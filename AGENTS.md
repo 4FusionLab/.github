@@ -1,5 +1,7 @@
 # 4FusionLab engineering instructions
 
+[Русская версия](AGENTS.ru.md)
+
 This repository holds reusable, **read-only** CI building blocks and organization-level defaults. Product-specific instructions belong in each product repository.
 
 ## Language and product documentation
