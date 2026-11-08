@@ -3,7 +3,7 @@
 <h1 align="center">4FusionLab</h1>
 <p align="center"><strong>Меньше рутины. Больше проектирования.</strong><br>Независимые инструменты для Autodesk Fusion (Fusion 360), которые упрощают CAD-моделирование, выделение геометрии, управление параметрами и повседневные операции.</p>
 
-<p align="center"><a href="README.md">English</a> · <a href="#доступные-аддоны">Аддоны</a> · <a href="#в-разработке">В разработке</a> · <a href="#каталог-цветов-филаментов">Каталог филаментов</a></p>
+<p align="center"><a href="README.md">English</a> · <a href="#доступные-аддоны">Аддоны</a> · <a href="#в-разработке">В разработке</a> · <a href="#каталог-цветов-филаментов">Каталог филаментов</a> · <a href="#для-разработчиков">Разработчикам</a></p>
 
 ---
 
@@ -13,7 +13,7 @@
 
 | Проект | Назначение | Статус | Действие |
 | --- | --- | --- | --- |
-| **[Paramood](https://github.com/4FusionLab/Paramood)** — хранитель меры | Создание и изменение пользовательских параметров, редактирование параметров модели и вычисление выражений в компактной панели. | Stable | [![Paramood latest release](https://img.shields.io/github/v/release/4FusionLab/Paramood?label=release)](https://github.com/4FusionLab/Paramood/releases/latest) |
+| **[Paramood](https://github.com/4FusionLab/Paramood)** — хранитель меры | Управление пользовательскими и модельными параметрами, формулы с IntelliSense и переключение сохранённых вариантов модели в одной панели. | Stable | [![Paramood latest release](https://img.shields.io/github/v/release/4FusionLab/Paramood?label=release)](https://github.com/4FusionLab/Paramood/releases/latest) |
 | **[Perfora](https://github.com/4FusionLab/Perfora)** — богиня отверстий | Параметрическая перфорация, вентиляционные решётки, органические узоры и диаграммы Вороного. | Stable | [![Perfora latest release](https://img.shields.io/github/v/release/4FusionLab/Perfora?label=release)](https://github.com/4FusionLab/Perfora/releases/latest) |
 | **[Selectra](https://github.com/4FusionLab/Selectra)** — богиня выбора | Выделение похожих граней и рёбер, поиск замкнутых контуров без лишних кликов. | Stable | [![Selectra latest release](https://img.shields.io/github/v/release/4FusionLab/Selectra?label=release)](https://github.com/4FusionLab/Selectra/releases/latest) |
 | **[Ejix](https://github.com/4FusionLab/Ejix)** — дух извлечения | Извлечение объёмов по профилям или плоским граням в отдельные тела и компоненты. | Stable | [![Ejix latest release](https://img.shields.io/github/v/release/4FusionLab/Ejix?label=release)](https://github.com/4FusionLab/Ejix/releases/latest) |
@@ -34,9 +34,15 @@
 
 [![Mesora latest release](https://img.shields.io/github/v/release/4FusionLab/Mesora?label=release)](https://github.com/4FusionLab/Mesora/releases/latest) ![Экспериментальный](https://img.shields.io/badge/status-experimental-orange)
 
-Измерения поддерживаемой геометрии и таблица 3D-размеров в текущем сеансе Fusion. **Используйте только временные документы и не сохраняйте их при включённом Mesora:** безопасность сохранения и повторного открытия не подтверждена. Измерения теряются при закрытии документа или остановке аддона. Подробности и ограничения — в [Mesora](https://github.com/4FusionLab/Mesora).
+Информационные 3D-размеры для поддерживаемых расстояний, углов, длин, радиусов, диаметров, площадей и периметров, доступные только в текущем сеансе Fusion. **Используйте только временные документы и не сохраняйте их при включённом Mesora:** безопасность сохранения и повторного открытия не подтверждена. Измерения теряются при закрытии документа или остановке аддона. Подробности и ограничения — в [Mesora](https://github.com/4FusionLab/Mesora).
 
 ## В разработке
+
+### [Threader](https://github.com/4FusionLab/Threader) — создание резьбы (заготовка проекта)
+
+Новый репозиторий будущего аддона для построения резьбы в Fusion. Сейчас он содержит неинициализированный общий шаблон аддона, **а не готовый генератор резьбы**.
+
+**Статус: начальная заготовка.** Рабочего аддона и релиза для скачивания пока нет.
 
 ### [Planara](https://github.com/4FusionLab/Planara) — богиня плоских миров
 
@@ -57,6 +63,12 @@
 **[Открыть интерактивную демоверсию каталога](https://4fusionlab.github.io/Filamentra-DataSource/)** · **[Посмотреть данные](https://github.com/4FusionLab/Filamentra-DataSource)**
 
 Веб-демонстрация показывает данные каталога; документация Filamentra пока не подтверждает работоспособную реализацию аддона Fusion. Оттенки и визуальные эффекты приблизительные и не заменяют инженерные характеристики материалов.
+
+## Для разработчиков
+
+**[Шаблон Fusion Add-in](https://github.com/4FusionLab/.fusion-addin-template)** — основа для новых аддонов Autodesk Fusion: манифест, стартовая команда, офлайн-тесты, CI для нескольких платформ, воспроизводимая сборка релизных архивов, документация на двух языках и правила для агентов в `AGENTS.md`. Перед использованием шаблон необходимо инициализировать.
+
+**[Общая платформа 4FusionLab](https://github.com/4FusionLab/.github)** содержит переиспользуемые процессы сборки и выпуска и [правила оформления README](https://github.com/4FusionLab/.github/blob/main/README_GUIDELINES.ru.md). Это инфраструктурные репозитории, а не аддоны для установки.
 
 ## Почему 4FusionLab?
 
