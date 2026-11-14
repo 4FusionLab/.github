@@ -28,13 +28,17 @@ Download a published release from each project's repository.
 
 <p align="center"><sub>See more examples and installation instructions in <a href="https://github.com/4FusionLab/Perfora">Perfora</a>.</sub></p>
 
-## Experimental release
+## Dimensions in the model
 
 ### [Mesora](https://github.com/4FusionLab/Mesora) — informational dimensions in the model
 
-[![Mesora latest release](https://img.shields.io/github/v/release/4FusionLab/Mesora?label=release)](https://github.com/4FusionLab/Mesora/releases/latest) ![Experimental](https://img.shields.io/badge/status-experimental-orange)
+[![Mesora latest release](https://img.shields.io/github/v/release/4FusionLab/Mesora?label=release)](https://github.com/4FusionLab/Mesora/releases/latest)
 
-Display session-only 3D dimensions for supported distances, angles, lengths, radii, diameters, areas, and perimeters. **Use disposable documents only and do not save while Mesora is enabled:** save and reopen safety has not been established. Measurements are lost when the document closes or the add-in stops. See [Mesora](https://github.com/4FusionLab/Mesora) for details and limitations.
+Display informational 3D dimensions for supported distances, angles, lengths, radii, diameters, areas, and perimeters. Measurement definitions, geometry references, offsets and visibility settings are saved with the design and restored when the document opens or Mesora starts. Values are recalculated after model changes; measurements do not create driving constraints.
+
+**Saving clears the displayed graphics, not the saved definitions.** Open Mesora or use **Refresh Dimensions** to show them again. Without Mesora running, the model remains editable and its Mesora dimensions are not displayed.
+
+Native macOS acceptance covers measurement types, selection, visibility, Undo/Redo, model updates, saving and reopening, Drawing transition and restart. **Windows Fusion has not been natively tested.** A completed production drawing and every cloud-save failure/recovery path remain outside the accepted scope. See [Mesora](https://github.com/4FusionLab/Mesora) for details and validation evidence.
 
 ## In development
 
